@@ -1,0 +1,12 @@
+{
+  "name": "notecards",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meganrenae21/notecards.git"
+  },
+  "author": "meganrenae",
+  "homepage": "https://notecards.meganrenae.me",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}
