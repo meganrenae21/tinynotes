@@ -1,0 +1,13 @@
+---
+layout: base.njk
+---
+
+<p class="post-meta">
+<span class="post-date">{{ page.date | shortDate }}</span>
+<span class="post-tags">
+    {% for tag in tags %}
+        <a class="post-tag-link" href="/tags/{{ tag }}/">{{ tag }} </a>
+    {% endfor %}
+</span>
+</p>
+{{ content | safe }}

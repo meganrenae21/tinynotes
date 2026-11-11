@@ -1,0 +1,18 @@
+---
+title: home
+content_heading: "latest notes"
+permalink: /
+layout: base.njk
+pagination: 
+  data: collections.notes
+  size: 10
+  alias: notes
+  generatePageOnEmptyData: true
+---
+
+<ul class="index">
+    {% for note in notes %}
+    <li><span class="index-title"><span class="index-date">{{ note.data.date | shortDate }}</span> - <a href={{ note.url }}>{{ note.data.title }}</a></span><span class="index-tags">{% for tag in note.data.tags %}<a class="index-tag-link" href="/tags/{{ tag }}/">{{ tag }}</a> {% endfor %}</span></li>
+    {% endfor %}
+</ul>
+{% include "pagination.njk" %}

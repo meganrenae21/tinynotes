@@ -1,0 +1,10 @@
+- title: home
+  permalink: ./
+- title: about
+  permalink: about/
+- title: colophon
+  permalink: colophon/
+- title: elsewhere
+  permalink: elsewhere/
+- title: support
+  permalink: support/

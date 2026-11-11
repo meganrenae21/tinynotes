@@ -1,0 +1,5 @@
+<nav role="navigation" aria-label="primary" class="navbar">
+ {% for page in pages %}
+ <a href="/{{ page.permalink }}">~/{{ page.title }}</a>
+ {% endfor %}
+</nav>

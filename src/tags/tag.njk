@@ -1,0 +1,15 @@
+---
+layout: base.njk
+permalink: tags/{{ tag | slug }}/
+pagination: 
+  data: collections.tags
+  size: 1
+  alias: tag
+---
+
+<h4 class="article-head">all posts tagged with {{ tag }}</h4>
+<ul class="index">
+    {% for note in collections.notes | whereContains("tags", tag) %}
+    <li><span class="index-title"><span class="index-date">{{ note.data.date | shortDate }}</span> - <a href="{{ note.url }}">{{ note.data.title }}</a></span></li>
+    {% endfor %}
+</ul>

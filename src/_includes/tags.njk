@@ -1,0 +1,7 @@
+
+   <h4 class="tags-head">tags</h4>
+        <aside class="tag-bar">
+          {%- for tag in collections.tags -%}
+            <span class="tag-box"><a class="tag-box-link" href="/tags/{{ tag }}/">{{ tag }}</a> <span class="tag-number">{{ collections[tag].length }}</span></span>
+          {%- endfor -%}
+        </aside>

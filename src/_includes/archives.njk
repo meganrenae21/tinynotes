@@ -1,0 +1,16 @@
+        <h4 class="calendar-head">calendar</h4>
+        <aside class="calendar">
+        {% for year in collections.years %}
+          <span class="display-year">{{ year }} <span class="year-number">{{ collections.PostsByYear[year].length }}</span></span> 
+          {% for month in collections.months %}
+          {% set yearPosts = collections.PostsByYearMonth %}
+          {% for item in yearPosts %}
+            {% if item.year == year %}             
+            {% if item.month == month %}
+              <span class="display-month"><a class="link-month" href="/archives/{{ year }}/{{ month | lower }}/">{{ month }}</a> <span class="month-number">{{ item.notes.length }}</span></span>
+            {% endif %}
+            {% endif %}
+          {% endfor %}
+          {% endfor %}
+        {% endfor %}
+        </aside>
